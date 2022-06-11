@@ -1,4 +1,9 @@
 
+#Author: Dr. Rami Khushaba
+# This function computes the spatial-temporal features benefiting Dynamic Time warping method for extracting spatial components
+# and an LSTM based paradigm for temporal information.
+
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
