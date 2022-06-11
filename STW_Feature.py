@@ -4,29 +4,13 @@
 # and an LSTM based paradigm for temporal information.
 
 
-import matplotlib.pyplot as plt
-import pandas as pd
 import numpy as np
 import scipy.io
 import math
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import accuracy_score
-from scipy.signal import butter, lfilter
-from scipy import signal
 import numpy
-from keras.datasets import imdb
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import LSTM
-from keras.layers.embeddings import Embedding
-from keras.preprocessing import sequence
-from sklearn.preprocessing import normalize
-from keras.layers import Dropout
-from collections import Counter
 import itertools
 from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
-import numpy as geek
 
 #signal_emg = scipy.io.loadmat('emg_ex.mat')
 #signal = signal_emg['emg_train_0_6']
