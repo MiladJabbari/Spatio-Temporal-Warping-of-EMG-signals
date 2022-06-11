@@ -43,7 +43,7 @@ def STW(input_signal,winsize,wininc):
         Feat = []
         Featd = []
         Featdd = []
-        for k in range(120):
+        for k in range(len(comb)):
             curwin_comb_1 = input[:, comb[k, 0] - 1]
             curwin_comb_2 = input[:, comb[k, 1] - 1]
 
