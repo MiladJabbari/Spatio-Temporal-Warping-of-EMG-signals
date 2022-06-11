@@ -12,10 +12,6 @@ import itertools
 from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
 
-#signal_emg = scipy.io.loadmat('emg_ex.mat')
-#signal = signal_emg['emg_train_0_6']
-#print(signal.shape)
-
 def STW(input_signal,winsize,wininc):
 
     nw = math.floor((len(input_signal) - winsize) / (wininc)) + 1
@@ -109,14 +105,3 @@ def STW(input_signal,winsize,wininc):
 
     STW = numpy.array(STW_Fe)
     return STW
-
-#STW_FE = STW(signal,30,10)
-#print(STW_FE)
-
-
-
-
-
-
-
-
