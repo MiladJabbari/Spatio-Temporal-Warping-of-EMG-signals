@@ -53,18 +53,9 @@ def STW(input_signal,winsize,wininc):
             Sddx_comb_1 = Sddx[:, comb[k, 0] - 1]
             Sddx_comb_2 = Sddx[:, comb[k, 1] - 1]
 
-            cc1 = curwin_comb_1[np.newaxis]
-            cc2 = curwin_comb_2[np.newaxis]
-
-            sdc1 = Sdx_comb_1[np.newaxis]
-            sdc2 = Sdx_comb_2[np.newaxis]
-
-            sddc1 = Sddx_comb_1[np.newaxis]
-            sddc2 = Sddx_comb_2[np.newaxis]
-
-            distance1, path1 = fastdtw(cc1, cc2, dist=euclidean)
-            distance2, path2 = fastdtw(sdc1, sdc2, dist=euclidean)
-            distance3, path3 = fastdtw(sddc1, sddc2, dist=euclidean)
+            distance1, path1 = fastdtw(curwin_comb_1[np.newaxis], curwin_comb_2[np.newaxis], dist=euclidean)
+            distance2, path2 = fastdtw(Sdx_comb_1[np.newaxis], Sdx_comb_2[np.newaxis], dist=euclidean)
+            distance3, path3 = fastdtw(Sddx_comb_1[np.newaxis], Sddx_comb_2[np.newaxis], dist=euclidean)
             Feat.append(distance1)
             Featd.append(distance2)
             Featdd.append(distance3)
