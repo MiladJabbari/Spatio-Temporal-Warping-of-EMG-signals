@@ -9,7 +9,7 @@
 # wininc: increasement size
 
 # Output:
-# STW: Spatio-Temporal (STW) Warping Feature
+# STW: Spatio-Temporal Warping (STW) Feature
 
 
 import numpy as np
