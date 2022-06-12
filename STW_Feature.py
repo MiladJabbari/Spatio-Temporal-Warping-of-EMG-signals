@@ -1,7 +1,15 @@
 
-#Author: Dr. Rami Khushaba
+# Author: Dr. Rami Khushaba
 # This function computes the spatial-temporal features benefiting Dynamic Time warping method for extracting spatial components
 # and an LSTM based paradigm for temporal information.
+
+# Inputs:
+# input_signal:  columns of signals
+# winsize: window size 
+# wininc: increasement size
+
+# Output:
+# STW: Spatio-Temporal (STW) Warping Feature
 
 
 import numpy as np
