@@ -6,7 +6,7 @@
 # Inputs:
 # input_signal:  columns of signals
 # winsize: window size 
-# wininc: increasement size
+# wininc: increments step size
 
 # Output:
 # STW: Spatio-Temporal Warping (STW) Feature
@@ -53,7 +53,7 @@ def STW(input_signal,winsize,wininc):
     NUM = np.zeros((1, len(feat[0])))
     Beta = 0.75
     
-    ##
+    ## Windows Increments
     st = 0
     en = winsize
 
@@ -81,7 +81,8 @@ def STW(input_signal,winsize,wininc):
 
             Sddx_comb_1 = Sddx[:, comb[k, 0] - 1]
             Sddx_comb_2 = Sddx[:, comb[k, 1] - 1]
-
+            
+            ## Dynamic Time Warping Calculations:
             distance1, path1 = fastdtw(curwin_comb_1[np.newaxis], curwin_comb_2[np.newaxis], dist=euclidean)
             distance2, path2 = fastdtw(Sdx_comb_1[np.newaxis], Sdx_comb_2[np.newaxis], dist=euclidean)
             distance3, path3 = fastdtw(Sddx_comb_1[np.newaxis], Sddx_comb_2[np.newaxis], dist=euclidean)
