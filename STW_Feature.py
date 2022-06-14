@@ -1,6 +1,6 @@
 
 # Author: Milad Jabbari
-# This function computes the spatial-temporal features benefiting Dynamic Time warping method for extracting spatial components
+# This function computes the spatial-temporal features of EMG signals benefiting Dynamic Time warping method for extracting spatial components
 # and an LSTM based paradigm for temporal information.
 
 # Inputs:
