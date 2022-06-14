@@ -11,7 +11,9 @@
 # Output:
 # STW: Spatio-Temporal Warping (STW) Feature
 
-# P.S: The code is Python version of the primary function written by Dr. Rami Kushaba in Matlab.  
+# P.S: The code is Python version of the primary function written by Dr. Rami Kushaba in Matlab for the following paper:
+#Jabbari, Milad, Rami Khushaba, and Kianoush Nazarpour. "Spatio-temporal warping for myoelectric control: an offline, feasibility study."
+#Journal of Neural Engineering 18.6 (2021): 066028.  
 
 
 import numpy as np
