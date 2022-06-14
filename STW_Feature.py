@@ -60,7 +60,8 @@ def STW(input_signal,winsize,wininc):
     def extractTDfeatures(input):
         N = len(input)
         K = len(input[0])
-
+        
+        ## First and Secodn Derivative
         Sdx = numpy.diff(input, axis=0)
         Sddx = numpy.diff(Sdx, axis=0)
 
