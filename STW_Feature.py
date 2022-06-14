@@ -35,21 +35,27 @@ from scipy.spatial.distance import euclidean
 from fastdtw import fastdtw
 
 def STW(input_signal,winsize,wininc):
-
+    
+    ## Parameters Defining:
     nw = math.floor((len(input_signal) - winsize) / (wininc)) + 1
     winsize = winsize
     wininc = wininc
-    st = 0
-    en = winsize
     steps = 1
     datasize = len(input_signal)
     Nsignals = len(input_signal[0])
-
     nn = (Nsignals * Nsignals - Nsignals) / 2 * 3
     nnint = int(nn)
+    
+    ## Memory Allocation:
     feat = np.zeros((nw, nnint))
+    
+    ## Cell State Parameters:
     NUM = np.zeros((1, len(feat[0])))
     Beta = 0.75
+    
+    ##
+    st = 0
+    en = winsize
 
     def extractTDfeatures(input):
         N = len(input)
