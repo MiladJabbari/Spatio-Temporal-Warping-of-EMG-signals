@@ -11,6 +11,8 @@
 # Output:
 # STW: Spatio-Temporal Warping (STW) Feature
 
+# P.S: The code is Python version of the primary function written by Dr. Rami Kushaba in Matlab.  
+
 
 import numpy as np
 import scipy.io
